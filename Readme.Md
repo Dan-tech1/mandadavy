@@ -3,7 +3,7 @@
   <p align="center">
     Un portfolio web moderne pour présenter mes compétences, projets et certifications.
     <br />
-    <a href="https://bouyadavy.netlify.app/"><strong>Voir la démo »</strong></a>
+    <a href="https://mandadavy.vercel.app"><strong>Voir la démo »</strong></a>
     <br />
     <br />
     <a href="#contact">Signaler un bug</a>
@@ -102,6 +102,6 @@ Ce projet est distribué sous la licence BSD 2-Clause. Voir le fichier `LICENCE`
 **BOUYA Davy**
 
 -   **Email :** `bouyadavy@gmail.com`
--   **Portfolio :** [bouyadavy.netlify.app](https://bouyadavy.netlify.app/)
+-   **Portfolio :** [mandadavy.vercel.app](https://mandadavy.vercel.app/)
 -   **GitHub :** [Dan-tech1](https://github.com/Dan-tech1)
 </div>
