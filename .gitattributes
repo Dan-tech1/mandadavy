@@ -1,0 +1,20 @@
+# Crée le fichier .gitattributes dans ton projet
+echo "# Configuration des fins de ligne pour Windows" > .gitattributes
+echo "* text=auto eol=lf" >> .gitattributes
+echo "" >> .gitattributes
+echo "# Fichiers texte" >> .gitattributes
+echo "*.html text" >> .gitattributes
+echo "*.css text" >> .gitattributes
+echo "*.js text" >> .gitattributes
+echo "*.md text" >> .gitattributes
+echo "*.json text" >> .gitattributes
+echo "*.txt text" >> .gitattributes
+echo "" >> .gitattributes
+echo "# Fichiers binaires (ne pas modifier)" >> .gitattributes
+echo "*.jpg binary" >> .gitattributes
+echo "*.jpeg binary" >> .gitattributes
+echo "*.png binary" >> .gitattributes
+echo "*.gif binary" >> .gitattributes
+echo "*.ico binary" >> .gitattributes
+echo "*.pdf binary" >> .gitattributes
+echo "*.doc binary" >> .gitattributes
