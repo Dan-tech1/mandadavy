@@ -569,3 +569,13 @@ footer {
         display: none;
     }
 }
+
+.pourcentage {
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: #0099cc 0px 0px 10px 0px;
+    padding: 2px 6px;
+    border-radius: 80px;
+    background: #11540591;
+    color: #00d4ff;
+}

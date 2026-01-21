@@ -1,24 +1,130 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" prefix="og: http://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOUYA Davy - Portfolio</title>
 
-    <!-- Tailwind CSS (Compiled) -->
+    <!-- 1. TITRE OPTIMISÉ SEO -->
+    <title>BOUYA Davy - Ingénieur Cybersécurité & Réseaux | Portfolio EMSI Casablanca</title>
+
+    <!-- 2. DESCRIPTION META (150-160 caractères) -->
+    <meta name="description"
+        content="Étudiant ingénieur EMSI Casablanca, spécialisé en cybersécurité des infrastructures réseaux et développement web PHP/Symfony. Certifications Cisco et Google.">
+
+    <!-- 3. OPEN GRAPH OPTIMISÉ -->
+    <meta property="og:type" content="profile">
+    <meta property="og:profile:first_name" content="Davy">
+    <meta property="og:profile:last_name" content="BOUYA">
+    <meta property="og:profile:username" content="bouyadavy">
+    <meta property="og:url" content="https://mandadavy.vercel.app/">
+    <meta property="og:title" content="BOUYA Davy - Ingénieur Cybersécurité & Réseaux">
+    <meta property="og:description"
+        content="Portfolio professionnel d'un étudiant ingénieur EMSI spécialisé cybersécurité réseaux">
+    <meta property="og:image" content="https://mandadavy.vercel.app/assets/icone/d-t.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="BOUYA Davy - Étudiant ingénieur EMSI en cybersécurité">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- 4. TWITTER CARD  -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@votrecompte">
+    <meta name="twitter:creator" content="@bouyadavy">
+    <meta name="twitter:title" content="BOUYA Davy | Ingénieur Cybersécurité EMSI">
+    <meta name="twitter:description" content="Portfolio étudiant ingénieur - Cybersécurité réseaux & développement web">
+    <meta name="twitter:image" content="https://mandadavy.vercel.app/assets/icone/d-t.jpg">
+    <meta name="twitter:label1" content="Spécialité">
+    <meta name="twitter:data1" content="Cybersécurité & Réseaux">
+    <meta name="twitter:label2" content="École">
+    <meta name="twitter:data2" content="EMSI Casablanca">
+
+    <!-- 5. CANONICAL & HREFLANG -->
+    <link rel="canonical" href="https://mandadavy.vercel.app/">
+
+    <!-- 6. SCHEMA.ORG  -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://mandadavy.vercel.app/#person",
+        "name": "BOUYA Davy",
+        "url": "https://mandadavy.vercel.app/",
+        "image": "https://mandadavy.vercel.app/assets/icone/d-t.jpg",
+        "jobTitle": "Étudiant Ingénieur en Cybersécurité & Réseaux",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "D&T système"
+        },
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "École Marocaine des Sciences de l'Ingénieur (EMSI)",
+            "url": "https://www.emsi.ma",
+            "sameAs": [
+                "https://www.facebook.com/EMSI.Maroc",
+                "https://www.linkedin.com/school/emsi-maroc/"
+            ]
+        },
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Programming Foundations with JavaScript, HTML and CSS",
+                "credentialCategory": "ProfessionalCertificate",
+                "recognizedBy": {
+                    "@type": "CollegeOrUniversity",
+                    "name": "Duke University"
+                }
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Foundations of Cybersecurity",
+                "credentialCategory": "ProfessionalCertificate",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "Google"
+                }
+            }
+        ],
+        "knowsAbout": [
+            "Cybersécurité",
+            "Réseaux informatiques", 
+            "Infrastructure réseau",
+            "Développement Web",
+            "PHP Symfony",
+            "Administration Linux",
+            "Certifications Cisco"
+        ],
+        "sameAs": [
+            "https://github.com/Dan-tech1",
+            "https://www.linkedin.com/in/manda-davy-b47a5a322?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bo7aIYr8nQz%2BmiYaLTvpRGw%3D%3D",
+            "https://wa.me/212779639119"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Casablanca",
+            "addressRegion": "Casablanca-Settat",
+            "addressCountry": "MA"
+        }
+    }
+    </script>
+
+    <!-- 7. FAVICON (SEO indirect) -->
+    <link rel="icon" href="/assets/icone/d-t.jpg" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icone/d-t.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icone/d-t.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icone/d-t.jpg">
+
+    <!-- 8. CSS (inchangé) -->
     <link rel="stylesheet" href="output.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- AOS Animation Library -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="src/css/certificats.css">
-    <link rel="shortcut icon" href="/assets/icone/d&t.jpg" type="image/x-icon">
+
+    <!-- 9. PRELOAD IMPORTANT ASSETS -->
+
+    <link rel="preload" href="assets/icone/bouya.jpg" as="image" type="image/jpeg" fetchpriority="high">
+    <link rel="preload" href="assets/icone/d&t.jpg" as="image" type="image/jpeg" fetchpriority="high">
 </head>
 
 <body class="gradient-dark text-white">
@@ -29,8 +135,9 @@
                 <div class="flex items-center gap-3">
                     <img src="assets/icone/d&t.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover shadow-lg">
                     <div class="flex items-center gap-1">
-                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                            <span style="font-size: 1.2rem;"><-</span>
+                        <div
+                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-white text-lg shadow-lg">
+                            <span style="font-size: 1.2rem;"> <- </span>
                         </div>
                     </div>
                     <span class="text-2xl font-bold">D&T système</span>
@@ -80,14 +187,14 @@
                             <div>
                                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-white mb-3">
                                     BOUYA Davy</h1>
-                                <h2 class="text-2xl md:text-4xl font-bold"><span class="text-white">Future </span><span
-                                        class="text-cyan-400">Ingenieur en cybersécurité & infrastructure des
+                                <h2 class="text-2xl md:text-4xl font-bold"><span class="text-white">Étudiant ingénieur
+                                        en </span><span class="text-cyan-400">cybersécurité & infrastructure
                                         réseaux</span></h2>
                             </div>
                             <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-xl">
-                                Étudiant en informatique et réseaux, passionné par la cybersécurité des infrastructures
-                                réseaux, le développement
-                                web et les nouvelles technologies.
+                                Étudiant en 3ème année à l'EMSI Casablanca, spécialisation cybersécurité des
+                                infrastructures
+                                réseaux. Passionné également par le développement web et les nouvelles technologies.
                             </p>
                         </div>
 
@@ -100,7 +207,8 @@
                             <a href="#" target="_blank" class="social-link social-facebook" title="Facebook">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="mailto:bouyadavy@gmail.com" target="_blankclass="social-link social-email" title="Email">
+                            <a href="mailto:bouyadavy@gmail.com" target="_blankclass=" social-link social-email"
+                                title="Email">
                                 <i class="fa-solid fa-envelope"></i>
                             </a>
                         </div>
@@ -135,7 +243,7 @@
                             <div
                                 class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-2xl opacity-20">
                             </div>
-                            <img src="assets/icone/bouya.jpg" alt="Profil"
+                            <img src="assets/icone/d&t.jpg" alt="Profil"
                                 class="relative rounded-lg object-cover w-5/6 mx-auto clipped">
                         </div>
                     </div>
@@ -144,11 +252,14 @@
                     <div class="order-1 md:order-2" data-aos="fade-up-left" data-aos-duration="400">
                         <h2 class="section-title text-left">À Propos <span class="span">de Moi</span></h2>
                         <p class="text-gray-300 text-lg leading-relaxed mb-8">
-                            Étudiant en informatique et réseaux, avec pour objectif de m'orienter vers la cybersécurité
-                            et l'infrastructure. Je suis passionné par le développement web et constamment à la
-                            recherche de nouvelles technologies à maîtriser. Ouvert à toute proposition de partenariat
-                            ou de stage, je suis prêt à mettre ma rigueur et ma créativité au service de projets
-                            innovants.
+                            Étudiant en informatique et réseaux à l'École Marocaine des Sciences de l'Ingénieur (EMSI)
+                            de Casablanca, je suis passionné par la cybersécurité des infrastructures réseaux,
+                            avec un intérêt marqué pour le développement web et les nouvelles technologies.
+                        </p>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                            Actuellement en troisième année d'école d'ingénieur, je me spécialise dans la sécurisation
+                            des réseaux et systèmes informatiques. J'ai acquis des compétences solides en administration
+                            réseau, programmation et gestion de projets informatiques.
                         </p>
                         <a href="assets/icone/bouyadavyCV.pdf" target="_blank">
                             <button class="btn-primary">
@@ -167,59 +278,59 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="400">
                         <i class="fab fa-html5" style="color: #f16529;"></i>
-                        <h3>HTML5</h3>
+                        <h3>HTML5 <br> <strong class="pourcentage">80%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="450">
                         <i class="fab fa-css3" style="color: #264de4;"></i>
-                        <h3>CSS3</h3>
+                        <h3>CSS3 <br> <strong class="pourcentage">75%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="500">
                         <i class="fab fa-js" style="color: #f7df1e;"></i>
-                        <h3>JavaScript</h3>
+                        <h3>JavaScript<br> <strong class="pourcentage">50%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="550">
                         <i class="fab fa-php" style="color: #777bb4;"></i>
-                        <h3>PHP</h3>
+                        <h3>PHP <br> <strong class="pourcentage">50%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-right" data-aos-duration="400">
                         <i class="fab fa-symfony" style="color: #000000;"></i>
-                        <h3>Symfony</h3>
+                        <h3>Symfony <br> <strong class="pourcentage">50%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-right" data-aos-duration="450">
                         <i class="fab fa-github" style="color: #ffffff;"></i>
-                        <h3>GitHub</h3>
+                        <h3>GitHub <br> <strong class="pourcentage">70%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-right" data-aos-duration="500">
                         <i class="fas fa-code" style="color: #00d4ff;"></i>
-                        <h3>C++</h3>
+                        <h3>C++ <br> <strong class="pourcentage">50%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-right" data-aos-duration="550">
                         <i class="fas fa-code" style="color: #0099cc;"></i>
-                        <h3>C</h3>
+                        <h3>C <br> <strong class="pourcentage">80%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="400">
                         <i class="fab fa-linux" style="color: #FCC624;"></i>
-                        <h3>Linux</h3>
+                        <h3>Linux <br> <strong class="pourcentage">50%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="450">
                         <i class="fab fa-windows" style="color: #0078D4;"></i>
-                        <h3>Windows</h3>
+                        <h3>Windows <br> <strong class="pourcentage">70%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="500">
                         <i class="fas fa-terminal" style="color: #00ff00;"></i>
-                        <h3>Bash</h3>
+                        <h3>Bash <br> <strong class="pourcentage">60%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-left" data-aos-duration="550">
                         <i class="fas fa-network-wired" style="color: #FF6B35;"></i>
-                        <h3>Réseaux</h3>
+                        <h3>Réseaux <br> <strong class="pourcentage">50%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-right" data-aos-duration="400">
                         <i class="fas fa-scroll" style="color: #4CAF50;"></i>
-                        <h3>Scripting</h3>
+                        <h3>Scripting <br> <strong class="pourcentage">50%</strong></h3>
                     </div>
                     <div class="skill-item" data-aos="flip-right" data-aos-duration="450">
                         <i class="fas fa-filter" style="color: #FF9800;"></i>
-                        <h3>Awk</h3>
+                        <h3>Awk <br> <strong class="pourcentage">40%</strong></h3>
                     </div>
                 </div>
             </div>
@@ -290,10 +401,11 @@
                         <img src="assets/projets/port.jpg" alt="Portfolio Bouya Davy">
                         <div class="project-overlay">
                             <h2>Portfolio Personnel</h2>
-                            <p><strong>Étudiant en Informatique</strong><br>HTML • CSS • JavaScript • C • Réseaux &
-                                Cybersécurité<br><em>EMSI Casablanca 2ème année | 2024-2025</em></p>
+                            <p><strong>Étudiant en Informatique & Réseaux</strong><br>Portfolio personnel, détails sur
+                                les compétences et projets réalisés pendant ma formation<br><em>EMSI Casablanca 3ème
+                                    année | 2025-2026 (deuxième version)</em></p>
                             <div class="flex gap-2">
-                                <a href="https://github.com/Dan-tech1/bouya-davy.git" target="_blank" title="GitHub">
+                                <a href="https://github.com/Dan-tech1/mandadavy.git" target="_blank" title="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://mandadavy.vercel.app" target="_blank" title="Voir le projet">
@@ -391,7 +503,7 @@
                         </p>
 
                         <div class="mb-6">
-                            <p class="text-sm text-gray-500 mb-2">Technologies maîtrisées :</p>
+                            <p class="text-sm text-gray-500 mb-2">Compétences acquises :</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="tech-tag bg-gray-900 text-blue-300">JavaScript</span>
                                 <span class="tech-tag bg-gray-900 text-orange-400">HTML and CSS</span>
@@ -414,7 +526,7 @@
                             </div>
                             <a href="https://coursera.org/verify/ICBNTF2GCLPD" target="_blank"
                                 class="certification-link text-cyan-400">
-                                <span>Certificat</span>
+                                <span>vérifier</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -446,7 +558,7 @@
                         </p>
 
                         <div class="mb-6">
-                            <p class="text-sm text-gray-500 mb-2">Expertise :</p>
+                            <p class="text-sm text-gray-500 mb-2">Compétences acquises :</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="tech-tag bg-gray-900 text-orange-300">HTML Sémantique</span>
                                 <span class="tech-tag bg-gray-900 text-green-400">Frontend Performance</span>
@@ -461,12 +573,12 @@
 
                         <div class="flex justify-between items-center pt-6 border-t border-gray-700">
                             <div>
-                                <p class="text-sm text-gray-500">Domaine :</p>
-                                <p class="text-white">Développement Inclusif</p>
+                                <p class="text-sm text-gray-500">Éditeur :</p>
+                                <p class="text-white">Board Infinity</p>
                             </div>
                             <a href="https://coursera.org/verify/RETXW1LUC443" target="_blank"
                                 class="certification-link text-green-400">
-                                <span>Certificat</span>
+                                <span>vérifier</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -497,7 +609,7 @@
                         </p>
 
                         <div class="mb-6">
-                            <p class="text-sm text-gray-500 mb-2">Compétences réseaux :</p>
+                            <p class="text-sm text-gray-500 mb-2">Compétences acquises :</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="tech-tag bg-gray-900 text-blue-400">OSI Models</span>
                                 <span class="tech-tag bg-gray-900 text-green-400">TCP/IP</span>
@@ -553,7 +665,7 @@
                         </p>
 
                         <div class="mb-6">
-                            <p class="text-sm text-gray-500 mb-2">Domaines sécurité :</p>
+                            <p class="text-sm text-gray-500 mb-2">Compétences acquises :</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="tech-tag bg-gray-900 text-green-400">Cybersécurité</span>
                                 <span class="tech-tag bg-gray-900 text-yellow-400">Security Information and Event
@@ -575,7 +687,7 @@
                             </div>
                             <a href="https://coursera.org/verify/VIHNCR2I4FBQ" target="_blank"
                                 class="certification-link text-green-400">
-                                <span>Certificat</span>
+                                <span>vérifier</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -607,7 +719,7 @@
                         </p>
 
                         <div class="mb-6">
-                            <p class="text-sm text-gray-500 mb-2">Expertise JS :</p>
+                            <p class="text-sm text-gray-500 mb-2">Compétences acquises :</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="tech-tag bg-gray-900 text-yellow-400">JavaScript ES6+</span>
                                 <span class="tech-tag bg-gray-900 text-blue-400">jQuery</span>
@@ -622,12 +734,12 @@
 
                         <div class="flex justify-between items-center pt-6 border-t border-gray-700">
                             <div>
-                                <p class="text-sm text-gray-500">Certificat :</p>
-                                <p class="text-white">JavaScript, jQuery, and JSON</p>
+                                <p class="text-sm text-gray-500">Éditeur :</p>
+                                <p class="text-white">University of Michigan</p>
                             </div>
                             <a href="https://coursera.org/verify/2F4JSQSBHH1A" target="_blank"
                                 class="certification-link text-yellow-400">
-                                <span>Certificat</span>
+                                <span>vérifier</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -659,7 +771,7 @@
                         </p>
 
                         <div class="mb-6">
-                            <p class="text-sm text-gray-500 mb-2">Expertise Cisco :</p>
+                            <p class="text-sm text-gray-500 mb-2">Compétences acquises :</p>
                             <div class="flex flex-wrap gap-2">
                                 <span class="tech-tag bg-gray-900 text-blue-400">Cisco Devices</span>
                                 <span class="tech-tag bg-gray-900 text-green-400">Network Design</span>
@@ -669,8 +781,8 @@
 
                         <div class="flex justify-between items-center pt-6 border-t border-gray-700">
                             <div>
-                                <p class="text-sm text-gray-500">Niveau :</p>
-                                <p class="text-white">Associate (CCNA)</p>
+                                <p class="text-sm text-gray-500">Éditeur :</p>
+                                <p class="text-white">Cisco Networking Academy</p>
                             </div>
                             <a href="#" target="_blank" class="certification-link text-blue-400">
                                 <span> En cours...</span>
@@ -761,9 +873,9 @@
                     <div class="bg-gradient-to-br from-cyan-400 to-blue-500 p-8 rounded-lg text-white"
                         data-aos="fade-right" data-aos-duration="400">
                         <p class="text-lg mb-6 leading-relaxed">
-                            Vous avez un projet en tête ou souhaitez simplement discuter ? N'hésitez pas à me
-                            contacter via WhatsApp, Facebook ou par email. Je suis toujours ouvert à de nouvelles
-                            opportunités et collaborations ou de stage !
+                            Vous avez un projet, une opportunité de stage ou souhaitez discuter ?
+                            Contactez-moi via WhatsApp, email ou réseaux sociaux.
+                            Je suis ouvert aux collaborations, stages et nouvelles opportunités !
                         </p>
                         <div class="flex gap-4">
                             <a href="https://wa.me/+212779639119" target="_blank" class="social-link social-whatsapp">
