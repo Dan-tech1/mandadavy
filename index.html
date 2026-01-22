@@ -109,10 +109,10 @@
     </script>
 
     <!-- 7. FAVICON (SEO indirect) -->
-    <link rel="icon" href="/assets/icone/d-t.jpg" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icone/d-t.jpg">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icone/d-t.jpg">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icone/d-t.jpg">
+    <link rel="icon" href="assets/icone/d-t.jpg" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icone/d-t.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icone/d-t.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icone/d-t.jpg">
 
     <!-- 8. CSS (inchangé) -->
     <link rel="stylesheet" href="output.css">
@@ -123,7 +123,6 @@
 
     <!-- 9. PRELOAD IMPORTANT ASSETS -->
 
-    <link rel="preload" href="assets/icone/bouya.jpg" as="image" type="image/jpeg" fetchpriority="high">
     <link rel="preload" href="assets/icone/d&t.jpg" as="image" type="image/jpeg" fetchpriority="high">
 </head>
 
@@ -156,7 +155,7 @@
                     <li><a href="#CertificationsProfessionnelles"
                             class="font-semibold hover:text-cyan-400 transition">Certifications Professionnelles</a>
                     </li>
-                    <li><a href="#services" class="font-semibold hover:text-cyan-400 transition">Services</a></li>
+                    <li><a href="#experience" class="font-semibold hover:text-cyan-400 transition">Expérience</a></li>
                     <li><a href="#contact" class="font-semibold hover:text-cyan-400 transition">Contact</a></li>
                 </ul>
 
@@ -172,7 +171,9 @@
                 <a href="#about" onclick="closeMobileMenu()">À propos</a>
                 <a href="#skills" onclick="closeMobileMenu()">Compétences</a>
                 <a href="#projects" onclick="closeMobileMenu()">Projets</a>
-                <a href="#services" onclick="closeMobileMenu()">Services</a>
+                <a href="#CertificationsProfessionnelles" onclick="closeMobileMenu()">Certifications
+                    Professionnelles</a>
+                <a href="#experience" onclick="closeMobileMenu()">Expérience</a>
                 <a href="#contact" onclick="closeMobileMenu()">Contact</a>
             </div>
         </nav>
@@ -197,9 +198,11 @@
                                 réseaux. Passionné également par le développement web et les nouvelles technologies.
                             </p>
                         </div>
-
+                        <div
+                            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2065&q=80')] bg-cover bg-center bg-no-repeat opacity-20">
+                        </div>
                         <!-- Social Links -->
-                        <div class="flex gap-4 pt-8">
+                        <div class="flex gap-4 pt-8 relative z-10">
                             <a href="https://wa.me/+212779639119" target="_blank" class="social-link social-whatsapp"
                                 title="WhatsApp">
                                 <i class="fab fa-whatsapp"></i>
@@ -214,7 +217,7 @@
                         </div>
 
                         <!-- CTA Button -->
-                        <div class="pt-8">
+                        <div class="pt-8 relative z-10">
                             <a href="#contact">
                                 <button class="btn-primary inline-flex items-center text-lg px-8 py-4">
                                     <i class="fa-solid fa-paper-plane mr-2"></i>Me Contacter
@@ -814,55 +817,55 @@
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="section" id="services">
-            <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
-                <h2 class="section-title"><span class="span">Mes</span> Services</h2>
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 relative bg-gray-900 overflow-hidden">
+            <!-- Image d'arrière-plan -->
+            <div class="absolute inset-0 z-0">
+                <div
+                    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center bg-no-repeat opacity-20">
+                </div>
+            </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="service-card" data-aos="fade-up" data-aos-duration="450">
-                        <i class="fas fa-code"></i>
-                        <h3 class="text-xl font-bold mb-4">Développement Web</h3>
-                        <p>
-                            Création de sites web modernes et responsives utilisant HTML, CSS, JavaScript et PHP.
-                            Solutions personnalisées pour répondre aux besoins uniques de votre entreprise ou projet.
-                        </p>
-                        <a href="#contact">
-                            <button class="btn-primary w-full">Me Contacter</button>
-                        </a>
-                    </div>
+            <!-- Contenu -->
+            <div class="relative z-10 max-w-7xl mx-auto px-4 md:px-6 py-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-cyan-400">Parcours Professionnel</h2>
+                    <p class="text-gray-300 text-lg">Mon expérience et réalisations professionnelles</p>
+                </div>
 
-                    <!-- Service 2 -->
-                    <div class="service-card" data-aos="fade-left" data-aos-duration="500">
-                        <i class="fas fa-wrench"></i>
-                        <h3 class="text-xl font-bold mb-4">Réparation Système</h3>
-                        <p>
-                            Expertise en diagnostic et réparation de systèmes Linux et Windows.
-                            Optimisation des performances, résolution des problèmes matériels et logiciels pour une
-                            expérience utilisateur fluide.
-                        </p>
-                        <a href="#contact">
-                            <button class="btn-primary w-full">Me Contacter</button>
-                        </a>
-                    </div>
-
-                    <!-- Service 3: Automatisation -->
-                    <div class="service-card" data-aos="fade-up" data-aos-duration="550">
-                        <i class="fas fa-robot"></i>
-                        <h3 class="text-xl font-bold mb-4">Automatisation des Tâches</h3>
-                        <p>
-                            J'optimise vos processus en automatisant les tâches répétitives. Gagnez du temps et de
-                            l'efficacité grâce à des scripts et des workflows sur mesure.
-                        </p>
-                        <a href="#contact">
-                            <button class="btn-primary w-full">Me Contacter</button>
-                        </a>
+                <div class="flex justify-center">
+                    <div class="w-full max-w-4xl">
+                        <div class="glass p-8 rounded-3xl backdrop-blur-sm bg-white/5 border border-white/10">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-gradient-to-r from-cyan-500 to-blue-600 p-4 rounded-full mr-4 shadow-lg">
+                                    <i class="fas fa-briefcase text-white text-2xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold mb-2 text-white">Développeur Freelance</h3>
+                                    <p class="text-cyan-400 font-semibold">2023 - Présent</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                                Développement de projets web personnels et réalisation de missions freelance.
+                                Spécialisation dans les technologies front-end et back-end modernes.
+                            </p>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="bg-gradient-to-r from-red-600 to-red-700 px-4 py-2 rounded-full text-white font-semibold shadow-lg">HTML</span>
+                                <span
+                                    class="bg-gradient-to-r from-red-600 to-red-700 px-4 py-2 rounded-full text-white font-semibold shadow-lg">CSS</span>
+                                <span
+                                    class="bg-gradient-to-r from-red-600 to-red-700 px-4 py-2 rounded-full text-white font-semibold shadow-lg">JavaScript</span>
+                                <span
+                                    class="bg-gradient-to-r from-red-600 to-red-700 px-4 py-2 rounded-full text-white font-semibold shadow-lg">PHP</span>
+                                <span
+                                    class="bg-gradient-to-r from-red-600 to-red-700 px-4 py-2 rounded-full text-white font-semibold shadow-lg">Symfony</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
         <!-- Contact Section -->
         <section class="section" id="contact">
             <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
