@@ -114,6 +114,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icone/d-t.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icone/d-t.jpg">
 
+    <!-- 8. FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+
     <!-- 8. CSS (inchangé) -->
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -128,39 +135,37 @@
 
 <body class="gradient-dark text-white">
     <div id="app">
-        <nav class="fixed top-0 left-0 w-full z-50">
+        <nav class="fixed top-0 left-0 w-full z-50 navbar" id="site-nav">
             <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
                 <!-- Logo -->
-                <div class="flex items-center gap-3">
-                    <img src="assets/icone/d&t.jpg" alt="Logo" class="w-10 h-10 rounded-full object-cover shadow-lg">
-                    <div class="flex items-center gap-1">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                            <span style="font-size: 1.2rem;"> <- </span>
+                <a href="#home" class="nav-brand flex items-center gap-3">
+                    <div class="logo-stack">
+                        <img src="assets/icone/d&t.jpg" alt="Logo" class="logo-image">
+                        <div class="logo-mark">
+                            <span>&lt;-</span>
                         </div>
                     </div>
-                    <span class="text-2xl font-bold">D&T système</span>
-                </div>
+                    <div class="leading-tight">
+                        <span class="text-xl md:text-2xl font-bold">D&T système</span>
+                        <span class="block text-[0.7rem] uppercase tracking-[0.35em] text-cyan-400">Cyber & Réseaux</span>
+                    </div>
+                </a>
 
                 <!-- Desktop Menu -->
                 <ul class="hidden md:flex items-center gap-8">
-                    <li><a href="#home"
-                            class="text-cyan-400 font-semibold hover:text-cyan-300 transition relative group">Accueil
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-0.5 bg-cyan-400 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                        </a></li>
-                    <li><a href="#about" class="font-semibold hover:text-cyan-400 transition">À propos</a></li>
-                    <li><a href="#skills" class="font-semibold hover:text-cyan-400 transition">Compétences</a></li>
-                    <li><a href="#projects" class="font-semibold hover:text-cyan-400 transition">Projets</a></li>
-                    <li><a href="#CertificationsProfessionnelles"
-                            class="font-semibold hover:text-cyan-400 transition">Certifications Professionnelles</a>
-                    </li>
-                    <li><a href="#experience" class="font-semibold hover:text-cyan-400 transition">Expérience</a></li>
-                    <li><a href="#contact" class="font-semibold hover:text-cyan-400 transition">Contact</a></li>
+                    <li><a href="#home" class="nav-link font-semibold">Accueil</a></li>
+                    <li><a href="#about" class="nav-link font-semibold">À propos</a></li>
+                    <li><a href="#skills" class="nav-link font-semibold">Compétences</a></li>
+                    <li><a href="#projects" class="nav-link font-semibold">Projets</a></li>
+                    <li><a href="#publications" class="nav-link font-semibold">Publications</a></li>
+                    <li><a href="#CertificationsProfessionnelles" class="nav-link font-semibold">Certifications</a></li>
+                    <li><a href="#experience" class="nav-link font-semibold">Expérience</a></li>
+                    <li><a href="#contact" class="nav-link font-semibold">Contact</a></li>
                 </ul>
 
                 <!-- Mobile Menu Button -->
-                <button class="md:hidden text-2xl" id="mobileMenuBtn">
+                <button class="md:hidden text-2xl nav-toggle" id="mobileMenuBtn" aria-label="Ouvrir le menu"
+                    aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -171,20 +176,23 @@
                 <a href="#about" onclick="closeMobileMenu()">À propos</a>
                 <a href="#skills" onclick="closeMobileMenu()">Compétences</a>
                 <a href="#projects" onclick="closeMobileMenu()">Projets</a>
-                <a href="#CertificationsProfessionnelles" onclick="closeMobileMenu()">Certifications
-                    Professionnelles</a>
+                <a href="#publications" onclick="closeMobileMenu()">Publications</a>
+                <a href="#CertificationsProfessionnelles" onclick="closeMobileMenu()">Certifications</a>
                 <a href="#experience" onclick="closeMobileMenu()">Expérience</a>
                 <a href="#contact" onclick="closeMobileMenu()">Contact</a>
             </div>
         </nav>
         <!-- Hero Section -->
         <section class="hero-section flex items-center justify-center" id="home">
+            <div class="hero-grid-pattern" aria-hidden="true"></div>
+            <div class="hero-glow" aria-hidden="true"></div>
             <div class="max-w-7xl mx-auto w-full px-4 md:px-6 py-20">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                     <!-- Text Content -->
-                    <div class="hero-text flex flex-col justify-center" data-aos="fade-right" data-aos-duration="400">
+                    <div class="hero-text flex flex-col justify-center relative z-10" data-aos="fade-right"
+                        data-aos-duration="400">
                         <div class="space-y-6">
-                            <p class="text-lg text-cyan-400 font-semibold">Bienvenue dans mon monde !</p>
+                            <p class="eyebrow text-lg text-cyan-400 font-semibold">Bienvenue dans mon monde !</p>
                             <div>
                                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-black leading-tight text-white mb-3">
                                     BOUYA Davy</h1>
@@ -197,31 +205,37 @@
                                 infrastructures
                                 réseaux. Passionné également par le développement web et les nouvelles technologies.
                             </p>
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=2065&q=80')] bg-cover bg-center bg-no-repeat opacity-20">
-                        </div>
-                        <!-- Social Links -->
-                        <div class="flex gap-4 pt-8 relative z-10">
-                            <a href="https://wa.me/+212779639119" target="_blank" class="social-link social-whatsapp"
-                                title="WhatsApp">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="#" target="_blank" class="social-link social-facebook" title="Facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="mailto:bouyadavy@gmail.com" target="_blankclass=" social-link social-email"
-                                title="Email">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
+                            <div class="hero-badges">
+                                <span class="badge">Cybersécurité</span>
+                                <span class="badge">Réseaux</span>
+                                <span class="badge">Linux</span>
+                                <span class="badge">Backend</span>
+                            </div>
                         </div>
 
                         <!-- CTA Button -->
-                        <div class="pt-8 relative z-10">
-                            <a href="#contact">
-                                <button class="btn-primary inline-flex items-center text-lg px-8 py-4">
-                                    <i class="fa-solid fa-paper-plane mr-2"></i>Me Contacter
-                                </button>
+                        <div class="flex flex-wrap gap-4 pt-8">
+                            <a href="#projects" class="btn-secondary inline-flex items-center">
+                                <i class="fa-solid fa-diagram-project mr-2"></i>Voir les projets
+                            </a>
+                            <a href="#contact" class="btn-primary inline-flex items-center text-lg px-8 py-4">
+                                <i class="fa-solid fa-paper-plane mr-2"></i>Me Contacter
+                            </a>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="flex gap-4 pt-8">
+                            <a href="https://wa.me/+212779639119" target="_blank" class="social-link social-whatsapp"
+                                title="WhatsApp" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" target="_blank" class="social-link social-facebook" title="Facebook"
+                                aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="mailto:bouyadavy@gmail.com" target="_blank" class="social-link social-email"
+                                title="Email" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
                             </a>
                         </div>
                     </div>
@@ -230,7 +244,8 @@
                     <div class="flex justify-center items-center" data-aos="fade-left" data-aos-duration="400">
                         <div class="profile-image-wrapper">
                             <div class="profile-glow"></div>
-                            <img src="assets/icone/bouya.jpg" alt="Profil" class="profile-image">
+                            <img src="assets/icone/bouya.jpg" alt="Profil" class="profile-image" decoding="async"
+                                fetchpriority="high">
                         </div>
                     </div>
                 </div>
@@ -246,7 +261,7 @@
                             <div
                                 class="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg blur-2xl opacity-20">
                             </div>
-                            <img src="assets/icone/d&t.jpg" alt="Profil"
+                            <img src="assets/icone/d&t.jpg" alt="Profil" loading="lazy" decoding="async"
                                 class="relative rounded-lg object-cover w-5/6 mx-auto clipped">
                         </div>
                     </div>
@@ -278,62 +293,173 @@
             <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
                 <h2 class="section-title"><span class="span">Mes</span> Compétences</h2>
 
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="400">
-                        <i class="fab fa-html5" style="color: #f16529;"></i>
-                        <h3>HTML5 <br> <strong class="pourcentage">80%</strong></h3>
+                <div class="skills-grid grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="skill-group" data-aos="fade-up" data-aos-duration="350">
+                        <div class="skill-group-header">
+                            <div class="skill-group-icon">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <div>
+                                <h3>Cybersécurité & Réseaux</h3>
+                                <p>Protection, supervision et design d'infrastructures réseau.</p>
+                            </div>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Cybersécurité</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 70%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Réseaux</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 75%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Cisco</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 65%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Network Security</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 60%;"></span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="450">
-                        <i class="fab fa-css3" style="color: #264de4;"></i>
-                        <h3>CSS3 <br> <strong class="pourcentage">75%</strong></h3>
+
+                    <div class="skill-group" data-aos="fade-up" data-aos-duration="400">
+                        <div class="skill-group-header">
+                            <div class="skill-group-icon">
+                                <i class="fas fa-terminal"></i>
+                            </div>
+                            <div>
+                                <h3>Systèmes & Scripting</h3>
+                                <p>Administration, automatisation et environnements Linux.</p>
+                            </div>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Linux</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 70%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Bash</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 60%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Windows</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 65%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Scripting / Awk</span>
+                                    <span>50%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 50%;"></span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="500">
-                        <i class="fab fa-js" style="color: #f7df1e;"></i>
-                        <h3>JavaScript<br> <strong class="pourcentage">50%</strong></h3>
+
+                    <div class="skill-group" data-aos="fade-up" data-aos-duration="450">
+                        <div class="skill-group-header">
+                            <div class="skill-group-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div>
+                                <h3>Backend & Web</h3>
+                                <p>Développement backend, API et frameworks modernes.</p>
+                            </div>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Python</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 60%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Django</span>
+                                    <span>55%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 55%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>PHP / Symfony</span>
+                                    <span>55%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 55%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>JavaScript</span>
+                                    <span>50%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 50%;"></span></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="550">
-                        <i class="fab fa-php" style="color: #777bb4;"></i>
-                        <h3>PHP <br> <strong class="pourcentage">50%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-right" data-aos-duration="400">
-                        <i class="fab fa-symfony" style="color: #000000;"></i>
-                        <h3>Symfony <br> <strong class="pourcentage">50%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-right" data-aos-duration="450">
-                        <i class="fab fa-github" style="color: #ffffff;"></i>
-                        <h3>GitHub <br> <strong class="pourcentage">70%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-right" data-aos-duration="500">
-                        <i class="fas fa-code" style="color: #00d4ff;"></i>
-                        <h3>C++ <br> <strong class="pourcentage">50%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-right" data-aos-duration="550">
-                        <i class="fas fa-code" style="color: #0099cc;"></i>
-                        <h3>C <br> <strong class="pourcentage">80%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="400">
-                        <i class="fab fa-linux" style="color: #FCC624;"></i>
-                        <h3>Linux <br> <strong class="pourcentage">50%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="450">
-                        <i class="fab fa-windows" style="color: #0078D4;"></i>
-                        <h3>Windows <br> <strong class="pourcentage">70%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="500">
-                        <i class="fas fa-terminal" style="color: #00ff00;"></i>
-                        <h3>Bash <br> <strong class="pourcentage">60%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-left" data-aos-duration="550">
-                        <i class="fas fa-network-wired" style="color: #FF6B35;"></i>
-                        <h3>Réseaux <br> <strong class="pourcentage">50%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-right" data-aos-duration="400">
-                        <i class="fas fa-scroll" style="color: #4CAF50;"></i>
-                        <h3>Scripting <br> <strong class="pourcentage">50%</strong></h3>
-                    </div>
-                    <div class="skill-item" data-aos="flip-right" data-aos-duration="450">
-                        <i class="fas fa-filter" style="color: #FF9800;"></i>
-                        <h3>Awk <br> <strong class="pourcentage">40%</strong></h3>
+
+                    <div class="skill-group" data-aos="fade-up" data-aos-duration="500">
+                        <div class="skill-group-header">
+                            <div class="skill-group-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h3>Ingénierie & Outils</h3>
+                                <p>Algorithmique, outils collaboratifs et pratiques pro.</p>
+                            </div>
+                        </div>
+                        <div class="skill-bars">
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>C / C++</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 75%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Git & GitHub</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 70%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>UI / UX</span>
+                                    <span>55%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 55%;"></span></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-bar-label">
+                                    <span>Documentation</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="skill-bar-track"><span style="--value: 60%;"></span></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -346,113 +472,238 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Project 1 - Portail RH (2025-2026) -->
                     <div class="project-card" data-aos="zoom-in" data-aos-duration="400">
-                        <img src="assets/projets/rh.jpg" alt="Portail RH">
+                        <img src="assets/projets/rh.jpg" alt="Portail RH" loading="lazy" decoding="async">
                         <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-cyan">Symfony</span>
+                                <span class="badge badge-blue">Dashboard</span>
+                                <span class="badge badge-dark">RH</span>
+                            </div>
                             <h2>Portail RH</h2>
                             <p><strong>Dashboard Backoffice</strong><br>Gestion complète des RH • Gestion employés &
                                 départements • Statistiques en temps réel<br><em>Fin semestre 2025-2026 | Projet de
                                     groupe</em></p>
-                            <div class="flex gap-2">
-                                <a href="https://github.com/Dan-tech1/Portail-RH.git" target="_blank" title="GitHub">
+                            <div class="project-actions">
+                                <a href="https://github.com/Dan-tech1/Portail-RH.git" target="_blank" title="GitHub"
+                                    class="icon-btn" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://dan-tech1.github.io/Portail-RH/" target="_blank"
-                                    title="Voir le projet">
+                                    title="Voir le projet" class="icon-btn" aria-label="Voir le projet">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
+                                <a href="projects/portail-rh.html" class="btn-light">Lire plus</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 2 - Gestion2.0 (2025-2026) -->
                     <div class="project-card" data-aos="zoom-in" data-aos-duration="420">
-                        <img src="assets/projets/task.jpg" alt="Gestion2.0">
+                        <img src="assets/projets/task.jpg" alt="Gestion2.0" loading="lazy" decoding="async">
                         <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-cyan">Symfony 7</span>
+                                <span class="badge badge-blue">Collaboration</span>
+                                <span class="badge badge-dark">RBAC</span>
+                            </div>
                             <h2>Gestion2.0</h2>
                             <p><strong>Gestion de Projets Collaboratifs</strong><br>Gestion des tâches • Collaboration
                                 d'équipe • Rôles & permissions<br><em>Symfony 7 | Fin semestre 2025-2026 | Projet de
                                     groupe</em></p>
-                            <div class="flex gap-2">
-                                <a href="https://github.com/Dan-tech1/Gestion2.0.git" target="_blank" title="GitHub">
+                            <div class="project-actions">
+                                <a href="https://github.com/Dan-tech1/Gestion2.0.git" target="_blank" title="GitHub"
+                                    class="icon-btn" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://dan-tech1.github.io/Gestion2.0/" target="_blank"
-                                    title="Voir le projet">
+                                    title="Voir le projet" class="icon-btn" aria-label="Voir le projet">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
+                                <a href="projects/gestion-2-0.html" class="btn-light">Lire plus</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 3 - AEG-UM6SS (2025-2026) -->
                     <div class="project-card" data-aos="zoom-in" data-aos-duration="440">
-                        <img src="https://aeg-um6ss.online/assets/images/aeg.jpg" alt="AEG-UM6SS">
+                        <img src="https://aeg-um6ss.online/assets/images/aeg.jpg" alt="AEG-UM6SS" loading="lazy"
+                            decoding="async">
                         <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-cyan">UI/UX</span>
+                                <span class="badge badge-blue">Responsive</span>
+                                <span class="badge badge-dark">Freelance</span>
+                            </div>
                             <h2>AEG-UM6SS</h2>
                             <p><strong>Site Web d'Association</strong><br>Plateforme pour étudiants gabonais • Design
                                 moderne & responsive<br><em>Freelance | 2025-2026</em></p>
-                            <div class="flex gap-2">
-                                <a href="https://aeg-um6ss.online" target="_blank" title="Voir le projet">
+                            <div class="project-actions">
+                                <a href="https://aeg-um6ss.online" target="_blank" title="Voir le projet"
+                                    class="icon-btn" aria-label="Voir le projet">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
+                                <a href="projects/aeg-um6ss.html" class="btn-light">Lire plus</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 4 - Portfolio Bouya Davy (2024-2025) -->
                     <div class="project-card" data-aos="zoom-in" data-aos-duration="480">
-                        <img src="assets/projets/port.jpg" alt="Portfolio Bouya Davy">
+                        <img src="assets/projets/port.jpg" alt="Portfolio Bouya Davy" loading="lazy" decoding="async">
                         <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-cyan">UI/UX</span>
+                                <span class="badge badge-blue">Tailwind</span>
+                                <span class="badge badge-dark">Portfolio</span>
+                            </div>
                             <h2>Portfolio Personnel</h2>
                             <p><strong>Étudiant en Informatique & Réseaux</strong><br>Portfolio personnel, détails sur
                                 les compétences et projets réalisés pendant ma formation<br><em>EMSI Casablanca 3ème
                                     année | 2025-2026 (deuxième version)</em></p>
-                            <div class="flex gap-2">
-                                <a href="https://github.com/Dan-tech1/mandadavy.git" target="_blank" title="GitHub">
+                            <div class="project-actions">
+                                <a href="https://github.com/Dan-tech1/mandadavy.git" target="_blank" title="GitHub"
+                                    class="icon-btn" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://mandadavy.vercel.app" target="_blank" title="Voir le projet">
+                                <a href="https://mandadavy.vercel.app" target="_blank" title="Voir le projet"
+                                    class="icon-btn" aria-label="Voir le projet">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
+                                <a href="projects/portfolio-personnel.html" class="btn-light">Lire plus</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 5 - Les Saveurs Croisées (2024-2025) -->
                     <div class="project-card" data-aos="zoom-in" data-aos-duration="500">
-                        <img src="assets/projets/cuisine_kota.jpg" alt="Les Saveurs Croisées">
+                        <img src="assets/projets/cuisine_kota.jpg" alt="Les Saveurs Croisées" loading="lazy"
+                            decoding="async">
                         <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-cyan">Vitrine</span>
+                                <span class="badge badge-blue">Formulaire</span>
+                                <span class="badge badge-dark">Responsive</span>
+                            </div>
                             <h2>Les Saveurs Croisées</h2>
                             <p><strong>Site Vitrine Restaurant</strong><br>Restaurant africain • Formulaire via Formfree
                                 • Design dynamique<br><em>Projet académique v2 | 2024-2025</em></p>
-                            <div class="flex gap-2">
+                            <div class="project-actions">
                                 <a href="https://github.com/Dan-tech1/Les-Saveurs-croisees.git" target="_blank"
-                                    title="GitHub">
+                                    title="GitHub" class="icon-btn" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
                                 <a href="https://dan-tech1.github.io/Les-Saveurs-croisees/" target="_blank"
-                                    title="Voir le projet">
+                                    title="Voir le projet" class="icon-btn" aria-label="Voir le projet">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
+                                <a href="projects/saveurs-croisees.html" class="btn-light">Lire plus</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Project 6 - Arduino (2024-2025) -->
                     <div class="project-card" data-aos="zoom-in" data-aos-duration="520">
-                        <img src="assets/projets/arduino.png" alt="Arduino Détection Mouvement">
+                        <img src="assets/projets/arduino.png" alt="Arduino Détection Mouvement" loading="lazy"
+                            decoding="async">
                         <div class="project-overlay">
+                            <div class="project-badges">
+                                <span class="badge badge-cyan">Arduino</span>
+                                <span class="badge badge-blue">Capteurs</span>
+                                <span class="badge badge-dark">IoT</span>
+                            </div>
                             <h2>Arduino Détection Mouvement</h2>
                             <p><strong>Système Électronique</strong><br>Détection de mouvement • Capteurs •
                                 Arduino<br><em>Projet académique prépa | 2024-2025</em></p>
-                            <div class="flex gap-2">
+                            <div class="project-actions">
                                 <a href="https://github.com/Dan-tech1/Arduino-projet2025.git" target="_blank"
-                                    title="GitHub">
+                                    title="GitHub" class="icon-btn" aria-label="GitHub">
                                     <i class="fab fa-github"></i>
                                 </a>
+                                <a href="projects/arduino-detection.html" class="btn-light">Lire plus</a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <!-- Publications Section -->
+        <section class="section" id="publications">
+            <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
+                <div class="text-center mb-12" data-aos="fade-up" data-aos-duration="350">
+                    <h2 class="section-title"><span class="span">Actualités</span> & Publications</h2>
+                    <p class="text-gray-400 text-lg max-w-3xl mx-auto">
+                        Veille technologique, retours d'expérience et articles techniques autour de la cybersécurité,
+                        des réseaux et du backend.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="blog-card" data-aos="fade-up" data-aos-duration="350">
+                        <div class="blog-image">
+                            <img src="assets/projets/image.png" alt="SIEM homelab" loading="lazy" decoding="async">
+                            <span class="blog-category">Cybersécurité</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 24 mai 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 6 min</span>
+                            </div>
+                            <h3>Monter un SIEM léger pour un homelab Linux</h3>
+                            <p>Collecte des logs, corrélations et alertes pour un lab personnel orienté Blue Team.</p>
+                            <div class="blog-tags">
+                                <span class="tag">SIEM</span>
+                                <span class="tag">Logs</span>
+                                <span class="tag">Linux</span>
+                            </div>
+                            <a href="publications/siem-homelab.html" class="btn-secondary btn-sm">Lire l'article</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-aos="fade-up" data-aos-duration="420">
+                        <div class="blog-image">
+                            <img src="assets/projets/rh.jpg" alt="VLAN campus" loading="lazy" decoding="async">
+                            <span class="blog-category">Réseaux</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 12 mai 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                            </div>
+                            <h3>Segmenter un réseau étudiant avec VLAN & ACL</h3>
+                            <p>Approche pratique pour isoler les flux, réduire la surface d'attaque et améliorer la QoS.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">VLAN</span>
+                                <span class="tag">Cisco</span>
+                                <span class="tag">ACL</span>
+                            </div>
+                            <a href="publications/vlan-campus.html" class="btn-secondary btn-sm">Lire l'article</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-aos="fade-up" data-aos-duration="480">
+                        <div class="blog-image">
+                            <img src="assets/projets/task.jpg" alt="Sécuriser une API Django" loading="lazy"
+                                decoding="async">
+                            <span class="blog-category">Backend</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> 03 mai 2026</span>
+                                <span><i class="fa-regular fa-clock"></i> 7 min</span>
+                            </div>
+                            <h3>Durcir une API Django : auth, rate-limit, audit</h3>
+                            <p>Bonnes pratiques pour sécuriser les endpoints, gérer les rôles et renforcer la traçabilité.
+                            </p>
+                            <div class="blog-tags">
+                                <span class="tag">Django</span>
+                                <span class="tag">OWASP</span>
+                                <span class="tag">API</span>
+                            </div>
+                            <a href="publications/django-api-hardening.html" class="btn-secondary btn-sm">Lire
+                                l'article</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -464,9 +715,9 @@
                 <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="400">
                     <div class="flex justify-center items-center space-x-8 mb-6">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Coursera-Logo_600x600.svg/240px-Coursera-Logo_600x600.svg.png"
-                            alt="Coursera" class="h-12">
+                            alt="Coursera" class="h-12" loading="lazy" decoding="async">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/320px-Cisco_logo_blue_2016.svg.png"
-                            alt="Cisco" class="h-12">
+                            alt="Cisco" class="h-12" loading="lazy" decoding="async">
                     </div>
                     <h2 class="section-title">
                         <span class="span">Certifications</span> Professionnelles
@@ -528,8 +779,8 @@
                                 <p class="text-white">Duke University</p>
                             </div>
                             <a href="https://coursera.org/verify/ICBNTF2GCLPD" target="_blank"
-                                class="certification-link text-cyan-400">
-                                <span>vérifier</span>
+                                class="certification-action">
+                                <span>Voir certificat</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -580,8 +831,8 @@
                                 <p class="text-white">Board Infinity</p>
                             </div>
                             <a href="https://coursera.org/verify/RETXW1LUC443" target="_blank"
-                                class="certification-link text-green-400">
-                                <span>vérifier</span>
+                                class="certification-action">
+                                <span>Voir certificat</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -634,8 +885,8 @@
                                 <p class="text-white">PACKT</p>
                             </div>
                             <a href="https://coursera.org/verify/Y3RT6N96MPIR" target="_blank"
-                                class="certification-link text-blue-400">
-                                <span>Vérifier</span>
+                                class="certification-action">
+                                <span>Voir certificat</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -647,7 +898,7 @@
                             <div class="flex items-center gap-3">
                                 <div class="certification-icon bg-[#4285F4]">
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/320px-Google_2015_logo.svg.png"
-                                        alt="Google" class="h-5">
+                                        alt="Google" class="h-5" loading="lazy" decoding="async">
                                 </div>
                                 <div>
                                     <span class="font-bold text-white">Google</span>
@@ -689,8 +940,8 @@
                                 <p class="text-white">Google Cybersecurity</p>
                             </div>
                             <a href="https://coursera.org/verify/VIHNCR2I4FBQ" target="_blank"
-                                class="certification-link text-green-400">
-                                <span>vérifier</span>
+                                class="certification-action">
+                                <span>Voir certificat</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -741,8 +992,8 @@
                                 <p class="text-white">University of Michigan</p>
                             </div>
                             <a href="https://coursera.org/verify/2F4JSQSBHH1A" target="_blank"
-                                class="certification-link text-yellow-400">
-                                <span>vérifier</span>
+                                class="certification-action">
+                                <span>Voir certificat</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -787,8 +1038,8 @@
                                 <p class="text-sm text-gray-500">Éditeur :</p>
                                 <p class="text-white">Cisco Networking Academy</p>
                             </div>
-                            <a href="#" target="_blank" class="certification-link text-blue-400">
-                                <span> En cours...</span>
+                            <a href="#" target="_blank" class="certification-action">
+                                <span>En cours...</span>
                                 <i class="fas fa-external-link-alt ml-2"></i>
                             </a>
                         </div>
@@ -873,8 +1124,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
                     <!-- Info Card -->
-                    <div class="bg-gradient-to-br from-cyan-400 to-blue-500 p-8 rounded-lg text-white"
-                        data-aos="fade-right" data-aos-duration="400">
+                    <div class="contact-card" data-aos="fade-right" data-aos-duration="400">
                         <p class="text-lg mb-6 leading-relaxed">
                             Vous avez un projet, une opportunité de stage ou souhaitez discuter ?
                             Contactez-moi via WhatsApp, email ou réseaux sociaux.
@@ -913,8 +1163,58 @@
             </div>
         </section>
         <!-- footer -->
-        <footer>
-            <p>&copy; <span id="current-year"></span> BOUYA Davy. Tous droits réservés.</p>
+        <footer class="footer">
+            <div class="max-w-7xl mx-auto px-4 md:px-6 py-12">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <div>
+                        <div class="footer-brand">
+                            <div class="footer-logo">D&T</div>
+                            <div>
+                                <h3 class="text-xl font-bold">BOUYA Davy</h3>
+                                <p class="text-gray-400">Étudiant ingénieur cybersécurité & réseaux.</p>
+                            </div>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://github.com/Dan-tech1" target="_blank" class="icon-btn"
+                                aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/manda-davy-b47a5a322" target="_blank" class="icon-btn"
+                                aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:bouyadavy@gmail.com" class="icon-btn" aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="footer-title">Navigation</h4>
+                        <ul class="footer-links">
+                            <li><a href="#about">À propos</a></li>
+                            <li><a href="#skills">Compétences</a></li>
+                            <li><a href="#projects">Projets</a></li>
+                            <li><a href="#publications">Publications</a></li>
+                            <li><a href="#CertificationsProfessionnelles">Certifications</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="footer-title">Contact</h4>
+                        <ul class="footer-links">
+                            <li><i class="fa-solid fa-location-dot"></i> Casablanca, Maroc</li>
+                            <li><i class="fa-solid fa-phone"></i> +212 779 639 119</li>
+                            <li><i class="fa-solid fa-envelope"></i> bouyadavy@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; <span id="current-year"></span> BOUYA Davy. Tous droits réservés.</p>
+                    <span class="footer-tag">Portfolio Cyber & Réseaux</span>
+                </div>
+            </div>
         </footer>
         <script>
             document.getElementById('current-year').textContent = new Date().getFullYear();

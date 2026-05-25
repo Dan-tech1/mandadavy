@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail RH | D&T système</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <link rel="stylesheet" href="../src/css/certificats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="gradient-dark text-white">
+    <nav class="fixed top-0 left-0 w-full z-50 navbar" id="site-nav">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html#projects" class="nav-brand flex items-center gap-3">
+                <div class="logo-stack">
+                    <img src="../assets/icone/d&t.jpg" alt="Logo" class="logo-image">
+                    <div class="logo-mark">
+                        <span>&lt;-</span>
+                    </div>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl md:text-2xl font-bold">D&T système</span>
+                    <span class="block text-[0.7rem] uppercase tracking-[0.35em] text-cyan-400">Projet</span>
+                </div>
+            </a>
+            <a href="../index.html#projects" class="btn-secondary btn-sm">Retour aux projets</a>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 detail-hero-content">
+            <p class="breadcrumb">Accueil / Projets / Portail RH</p>
+            <h1>Portail RH</h1>
+            <p class="detail-subtitle">
+                Dashboard backoffice RH pour piloter les employés, départements et indicateurs clés avec une expérience
+                de gestion claire et sécurisée.
+            </p>
+            <div class="detail-actions">
+                <a href="https://github.com/Dan-tech1/Portail-RH.git" target="_blank" class="btn-primary btn-sm">
+                    <i class="fab fa-github mr-2"></i>GitHub
+                </a>
+                <a href="https://dan-tech1.github.io/Portail-RH/" target="_blank" class="btn-secondary btn-sm">
+                    <i class="fas fa-external-link-alt mr-2"></i>Démo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
+            <div class="detail-layout">
+                <div class="detail-main">
+                    <div class="detail-card detail-section">
+                        <img src="../assets/projets/rh.jpg" alt="Portail RH" class="rounded-xl mb-6" loading="lazy"
+                            decoding="async">
+                        <h3>Aperçu du projet</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Portail RH conçu pour centraliser les opérations d'une équipe : gestion des collaborateurs,
+                            suivi des départements, statistiques temps réel et tableaux de bord interactifs.
+                        </p>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Fonctionnalités clés</h3>
+                        <ul class="detail-list">
+                            <li>Gestion des employés, rôles et départements</li>
+                            <li>Tableaux de bord décisionnels avec KPIs RH</li>
+                            <li>Système d'authentification et permissions</li>
+                            <li>Exports et reporting pour le suivi trimestriel</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Galerie</h3>
+                        <div class="detail-gallery">
+                            <img src="../assets/projets/rh.jpg" alt="Dashboard RH" loading="lazy" decoding="async">
+                            <img src="../assets/projets/task.jpg" alt="Gestion utilisateurs" loading="lazy"
+                                decoding="async">
+                            <img src="../assets/projets/port.jpg" alt="Statistiques RH" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Difficultés rencontrées</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Harmoniser les droits d'accès entre managers et RH tout en gardant une interface simple,
+                            puis optimiser le chargement des statistiques sur des volumes croissants.
+                        </p>
+                        <h3 class="mt-6">Solutions mises en place</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Mise en place d'un RBAC clair, pagination des listes, cache léger pour les métriques, et
+                            composants réutilisables pour un rendu fluide.
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="detail-aside">
+                    <div class="detail-card detail-section">
+                        <h3>Technologies</h3>
+                        <div class="detail-badges">
+                            <span class="badge badge-cyan">Symfony</span>
+                            <span class="badge badge-blue">PHP</span>
+                            <span class="badge badge-dark">MySQL</span>
+                            <span class="badge badge-dark">Twig</span>
+                        </div>
+                    </div>
+                    <div class="detail-card detail-section">
+                        <h3>Architecture technique</h3>
+                        <ul class="detail-list">
+                            <li>MVC Symfony avec services métiers</li>
+                            <li>Base relationnelle normalisée</li>
+                            <li>RBAC pour les autorisations</li>
+                            <li>Tableaux de bord temps réel</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card detail-section">
+                        <h3>Liens</h3>
+                        <div class="detail-actions">
+                            <a href="https://github.com/Dan-tech1/Portail-RH.git" target="_blank"
+                                class="btn-secondary btn-sm">Code source</a>
+                            <a href="https://dan-tech1.github.io/Portail-RH/" target="_blank"
+                                class="btn-primary btn-sm">Voir la démo</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

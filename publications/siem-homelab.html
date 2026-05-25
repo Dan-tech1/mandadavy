@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEM homelab Linux | Publications</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <link rel="stylesheet" href="../src/css/certificats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="gradient-dark text-white">
+    <nav class="fixed top-0 left-0 w-full z-50 navbar" id="site-nav">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html#publications" class="nav-brand flex items-center gap-3">
+                <div class="logo-stack">
+                    <img src="../assets/icone/d&t.jpg" alt="Logo" class="logo-image">
+                    <div class="logo-mark">
+                        <span>&lt;-</span>
+                    </div>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl md:text-2xl font-bold">D&T système</span>
+                    <span class="block text-[0.7rem] uppercase tracking-[0.35em] text-cyan-400">Publication</span>
+                </div>
+            </a>
+            <a href="../index.html#publications" class="btn-secondary btn-sm">Retour aux publications</a>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 detail-hero-content">
+            <p class="breadcrumb">Accueil / Publications / SIEM homelab</p>
+            <h1>Monter un SIEM léger pour un homelab Linux</h1>
+            <p class="detail-subtitle">
+                Guide pratique pour centraliser les logs, détecter des anomalies et construire une base de monitoring
+                Blue Team.
+            </p>
+            <div class="detail-badges mt-4">
+                <span class="badge badge-cyan">SIEM</span>
+                <span class="badge badge-blue">Logs</span>
+                <span class="badge badge-dark">Linux</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
+            <div class="detail-layout">
+                <div class="detail-main">
+                    <div class="detail-card detail-section">
+                        <img src="../assets/projets/image.png" alt="SIEM homelab" class="rounded-xl mb-6"
+                            loading="lazy" decoding="async">
+                        <h3>Résumé</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Un SIEM efficace ne nécessite pas forcément une grosse infrastructure. Avec des outils
+                            open-source et une bonne architecture des logs, on peut construire une plateforme
+                            d'observabilité solide pour un lab personnel.
+                        </p>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Étapes clés</h3>
+                        <ul class="detail-list">
+                            <li>Centraliser les logs (auth, système, applicatif)</li>
+                            <li>Normaliser et enrichir les événements</li>
+                            <li>Créer des alertes sur comportements anormaux</li>
+                            <li>Construire des dashboards de suivi</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Bonnes pratiques</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Commencer petit, documenter chaque source de logs, et prioriser les alertes à forte valeur.
+                            Un SIEM est un projet vivant qui évolue avec les scénarios de sécurité.
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="detail-aside">
+                    <div class="detail-card detail-section">
+                        <h3>Outils recommandés</h3>
+                        <ul class="detail-list">
+                            <li>Wazuh / Elastic Stack</li>
+                            <li>Fail2ban + journald</li>
+                            <li>Dashboards Kibana</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card detail-section">
+                        <h3>Temps de lecture</h3>
+                        <p class="text-gray-300">6 minutes</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

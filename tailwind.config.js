@@ -2,6 +2,8 @@
 export default {
   content: [
     "./index.html",
+    "./projects/**/*.html",
+    "./publications/**/*.html",
     "./script.js",
   ],
   theme: {

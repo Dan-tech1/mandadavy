@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion2.0 | D&T système</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <link rel="stylesheet" href="../src/css/certificats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="gradient-dark text-white">
+    <nav class="fixed top-0 left-0 w-full z-50 navbar" id="site-nav">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html#projects" class="nav-brand flex items-center gap-3">
+                <div class="logo-stack">
+                    <img src="../assets/icone/d&t.jpg" alt="Logo" class="logo-image">
+                    <div class="logo-mark">
+                        <span>&lt;-</span>
+                    </div>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl md:text-2xl font-bold">D&T système</span>
+                    <span class="block text-[0.7rem] uppercase tracking-[0.35em] text-cyan-400">Projet</span>
+                </div>
+            </a>
+            <a href="../index.html#projects" class="btn-secondary btn-sm">Retour aux projets</a>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 detail-hero-content">
+            <p class="breadcrumb">Accueil / Projets / Gestion2.0</p>
+            <h1>Gestion2.0</h1>
+            <p class="detail-subtitle">
+                Plateforme collaborative pour piloter les projets d'équipe : tâches, rôles, permissions et suivi
+                d'avancement centralisé.
+            </p>
+            <div class="detail-actions">
+                <a href="https://github.com/Dan-tech1/Gestion2.0.git" target="_blank" class="btn-primary btn-sm">
+                    <i class="fab fa-github mr-2"></i>GitHub
+                </a>
+                <a href="https://dan-tech1.github.io/Gestion2.0/" target="_blank" class="btn-secondary btn-sm">
+                    <i class="fas fa-external-link-alt mr-2"></i>Démo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
+            <div class="detail-layout">
+                <div class="detail-main">
+                    <div class="detail-card detail-section">
+                        <img src="../assets/projets/task.jpg" alt="Gestion2.0" class="rounded-xl mb-6" loading="lazy"
+                            decoding="async">
+                        <h3>Aperçu du projet</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Gestion2.0 simplifie la collaboration entre membres grâce à des workflows clairs, une vue
+                            globale des projets et un suivi des tâches en temps réel.
+                        </p>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Fonctionnalités clés</h3>
+                        <ul class="detail-list">
+                            <li>Création de projets et assignation des rôles</li>
+                            <li>Gestion des tâches, statuts et priorités</li>
+                            <li>Suivi d'avancement et notifications d'équipe</li>
+                            <li>Historique des actions pour audit interne</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Galerie</h3>
+                        <div class="detail-gallery">
+                            <img src="../assets/projets/task.jpg" alt="Dashboard projets" loading="lazy"
+                                decoding="async">
+                            <img src="../assets/projets/port.jpg" alt="Gestion des tâches" loading="lazy"
+                                decoding="async">
+                            <img src="../assets/projets/rh.jpg" alt="Rapports" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Difficultés rencontrées</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Gérer les permissions multi-niveaux et synchroniser les tâches entre plusieurs équipes tout
+                            en conservant une UX fluide.
+                        </p>
+                        <h3 class="mt-6">Solutions mises en place</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Mise en place d'un modèle RBAC, workflows par statut et composants UI réutilisables pour
+                            garder des écrans cohérents.
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="detail-aside">
+                    <div class="detail-card detail-section">
+                        <h3>Technologies</h3>
+                        <div class="detail-badges">
+                            <span class="badge badge-cyan">Symfony 7</span>
+                            <span class="badge badge-blue">PHP</span>
+                            <span class="badge badge-dark">MySQL</span>
+                            <span class="badge badge-dark">RBAC</span>
+                        </div>
+                    </div>
+                    <div class="detail-card detail-section">
+                        <h3>Architecture technique</h3>
+                        <ul class="detail-list">
+                            <li>Modules projets, tâches, utilisateurs</li>
+                            <li>Permissions et rôles centralisés</li>
+                            <li>Tableaux de bord évolutifs</li>
+                            <li>Notifications internes</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card detail-section">
+                        <h3>Liens</h3>
+                        <div class="detail-actions">
+                            <a href="https://github.com/Dan-tech1/Gestion2.0.git" target="_blank"
+                                class="btn-secondary btn-sm">Code source</a>
+                            <a href="https://dan-tech1.github.io/Gestion2.0/" target="_blank"
+                                class="btn-primary btn-sm">Voir la démo</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

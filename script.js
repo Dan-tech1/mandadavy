@@ -23,12 +23,19 @@ AOS.init({
 const mobileMenuBtn = document.getElementById("mobileMenuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-mobileMenuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active");
-});
+if (mobileMenuBtn && mobileMenu) {
+  mobileMenuBtn.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("active");
+    mobileMenuBtn.setAttribute("aria-expanded", String(isOpen));
+  });
+}
 
 function closeMobileMenu() {
+  if (!mobileMenu) return;
   mobileMenu.classList.remove("active");
+  if (mobileMenuBtn) {
+    mobileMenuBtn.setAttribute("aria-expanded", "false");
+  }
 }
 
 // Close mobile menu when clicking outside
@@ -53,10 +60,15 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// Active nav link on scroll
+// Navbar styles + Active nav link on scroll
+const nav = document.getElementById("site-nav");
 window.addEventListener("scroll", () => {
+  if (nav) {
+    nav.classList.toggle("scrolled", window.scrollY > 10);
+  }
+
   const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll("nav a");
+  const navLinks = document.querySelectorAll(".nav-link");
 
   let current = "";
   sections.forEach((section) => {
@@ -68,9 +80,11 @@ window.addEventListener("scroll", () => {
   });
 
   navLinks.forEach((link) => {
-    link.classList.remove("text-cyan-400");
+    link.classList.remove("nav-link-active");
     if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("text-cyan-400");
+      link.classList.add("nav-link-active");
     }
   });
 });
+
+window.dispatchEvent(new Event("scroll"));

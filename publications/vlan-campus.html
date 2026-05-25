@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLAN & ACL campus | Publications</title>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <link rel="stylesheet" href="../src/css/certificats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="gradient-dark text-white">
+    <nav class="fixed top-0 left-0 w-full z-50 navbar" id="site-nav">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
+            <a href="../index.html#publications" class="nav-brand flex items-center gap-3">
+                <div class="logo-stack">
+                    <img src="../assets/icone/d&t.jpg" alt="Logo" class="logo-image">
+                    <div class="logo-mark">
+                        <span>&lt;-</span>
+                    </div>
+                </div>
+                <div class="leading-tight">
+                    <span class="text-xl md:text-2xl font-bold">D&T système</span>
+                    <span class="block text-[0.7rem] uppercase tracking-[0.35em] text-cyan-400">Publication</span>
+                </div>
+            </a>
+            <a href="../index.html#publications" class="btn-secondary btn-sm">Retour aux publications</a>
+        </div>
+    </nav>
+
+    <section class="detail-hero">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 detail-hero-content">
+            <p class="breadcrumb">Accueil / Publications / VLAN & ACL</p>
+            <h1>Segmenter un réseau étudiant avec VLAN & ACL</h1>
+            <p class="detail-subtitle">
+                Comment isoler les flux, protéger les ressources sensibles et optimiser la QoS sur un réseau campus.
+            </p>
+            <div class="detail-badges mt-4">
+                <span class="badge badge-cyan">VLAN</span>
+                <span class="badge badge-blue">Cisco</span>
+                <span class="badge badge-dark">ACL</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="max-w-7xl mx-auto w-full px-4 md:px-6">
+            <div class="detail-layout">
+                <div class="detail-main">
+                    <div class="detail-card detail-section">
+                        <img src="../assets/projets/rh.jpg" alt="Segmentation réseau" class="rounded-xl mb-6"
+                            loading="lazy" decoding="async">
+                        <h3>Résumé</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            La segmentation réseau est indispensable pour limiter la propagation des attaques. VLAN et
+                            ACL permettent de cloisonner les services et d'appliquer des politiques d'accès précises.
+                        </p>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Architecture recommandée</h3>
+                        <ul class="detail-list">
+                            <li>VLAN par zone : étudiants, administration, lab</li>
+                            <li>ACL inter-VLAN pour les flux critiques</li>
+                            <li>DHCP séparé par segments</li>
+                            <li>Supervision des trunks et logs réseau</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card detail-section">
+                        <h3>Points d'attention</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            Toujours documenter la topologie, tester chaque règle ACL et prévoir un plan de rollback.
+                            Les erreurs de configuration sont la première cause d'indisponibilité.
+                        </p>
+                    </div>
+                </div>
+
+                <aside class="detail-aside">
+                    <div class="detail-card detail-section">
+                        <h3>Outils recommandés</h3>
+                        <ul class="detail-list">
+                            <li>Packet Tracer / GNS3</li>
+                            <li>Switches Cisco + IOS</li>
+                            <li>Monitoring (SNMP/NetFlow)</li>
+                        </ul>
+                    </div>
+                    <div class="detail-card detail-section">
+                        <h3>Temps de lecture</h3>
+                        <p class="text-gray-300">5 minutes</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
