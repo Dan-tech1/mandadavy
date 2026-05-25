@@ -176,6 +176,17 @@ body {
     opacity: 0.6;
 }
 
+.hero-matrix {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.55;
+    mix-blend-mode: screen;
+    pointer-events: none;
+}
+
 .hero-glow {
     position: absolute;
     right: -20%;
@@ -196,6 +207,11 @@ body {
     background-clip: text;
     animation: fadeInUp 1s ease-out;
     margin-bottom: 0.5rem;
+}
+
+.hero-section > *:not(.hero-grid-pattern):not(.hero-matrix):not(.hero-glow) {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text h3 {
@@ -388,6 +404,27 @@ body {
     align-items: center;
     padding: 100px 0;
     scroll-margin-top: 110px;
+}
+
+#skills {
+    position: relative;
+    overflow: hidden;
+}
+
+#skills > .max-w-7xl {
+    position: relative;
+    z-index: 1;
+}
+
+.skills-hacker-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none;
+    opacity: 0.48;
+    mix-blend-mode: screen;
 }
 
 .section:nth-of-type(even) {
@@ -654,6 +691,31 @@ body {
     transform: translateY(-3px);
 }
 
+/* Experience Cards */
+.experience-grid {
+    margin-top: 1rem;
+}
+.experience-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(148,163,184,0.06);
+    padding: 1.25rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.experience-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(2,6,23,0.5);
+}
+.experience-card h3 {
+    margin-bottom: 0.25rem;
+}
+.experience-card p {
+    color: #cbd5e1;
+}
+.experience-card ul li {
+    color: #cbd5e1;
+}
+
 /* Contact Form */
 .contact-form {
     background: var(--card-bg);
@@ -761,6 +823,36 @@ body {
 .social-email:hover {
     background: #c5221f;
     box-shadow: 0 8px 20px rgba(234, 67, 53, 0.3);
+}
+
+/* Scoped canvas styling: show hero matrix (red) but keep skills hacker hidden for now */
+.hero-matrix {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block !important;
+    opacity: 0.25; /* plus discret pour ne pas déranger */
+    pointer-events: none;
+    mix-blend-mode: normal;
+    z-index: 0;
+}
+.hero-section > *:not(.hero-grid-pattern):not(.hero-matrix):not(.hero-glow) {
+    position: relative;
+    z-index: 2; /* s'assurer que le contenu reste au-dessus du canvas */
+}
+
+/* Désactiver l'animation sur petits écrans pour éviter interférences */
+@media (max-width: 768px) {
+    .hero-matrix {
+        display: none !important;
+        opacity: 0 !important;
+    }
+}
+.skills-hacker-bg {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Mobile Menu */
