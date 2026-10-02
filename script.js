@@ -213,3 +213,45 @@ window.addEventListener("scroll", () => {
 });
 
 window.dispatchEvent(new Event("scroll"));
+
+// Filtrage interactif de la section Projets
+function initProjectsFilter() {
+  const filterBtns = document.querySelectorAll(".project-filter-btn");
+  const projectCards = document.querySelectorAll(".project-card-pro");
+
+  if (!filterBtns.length || !projectCards.length) return;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Activer le bouton sélectionné
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const selectedFilter = btn.getAttribute("data-filter");
+
+      projectCards.forEach((card) => {
+        const cardCategory = card.getAttribute("data-category");
+
+        if (selectedFilter === "all" || cardCategory === selectedFilter) {
+          card.classList.remove("is-hidden");
+          card.classList.add("is-showing");
+        } else {
+          card.classList.add("is-hidden");
+          card.classList.remove("is-showing");
+        }
+      });
+
+      // Rafraîchir les ancres AOS après le recalcul du DOM
+      if (typeof AOS !== "undefined" && AOS.refresh) {
+        setTimeout(() => AOS.refresh(), 150);
+      }
+    });
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initProjectsFilter);
+} else {
+  initProjectsFilter();
+}
+
